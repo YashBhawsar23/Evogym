@@ -1,8 +1,10 @@
 import React from "react";
+import { SelectedPage } from "@/shared/types";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Signup from "./scenes/signup";
 import App from "./App";
+
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
