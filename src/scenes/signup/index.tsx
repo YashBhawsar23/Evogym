@@ -110,14 +110,9 @@ import Footer from "@/scenes/footer";
 const Signup = () => {
   const [isLogin, setIsLogin] = useState(true);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic
-  };
-
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container flex h-screen w-full items-center justify-center bg-slate-100">
         <div className="form-container w-80 rounded-lg bg-white p-5 shadow-md">
           <div className="form-toggle mb-5 flex justify-between">
@@ -140,7 +135,7 @@ const Signup = () => {
               Sign Up
             </button>
           </div>
-          <form className="form flex flex-col" onSubmit={handleSubmit}>
+          <form className="form flex flex-col">
             {isLogin ? (
               <>
                 <input
