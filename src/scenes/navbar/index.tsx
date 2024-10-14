@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.png";
 import Link from "./Link";
+import { Link as RouterLink } from "react-router-dom";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQueries";
 import ActionButton from "@/shared/ActionButton";
@@ -53,7 +54,13 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                   />
                 </div>
                 <div className={`${flexBetween} gap-8`}>
-                  <p>Sign Up </p>
+                  {/* <p>Sign Up </p> */}
+                  <RouterLink
+                    to="/signup"
+                    className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white"
+                  >
+                    Sign Up
+                  </RouterLink>
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a Member
                   </ActionButton>
